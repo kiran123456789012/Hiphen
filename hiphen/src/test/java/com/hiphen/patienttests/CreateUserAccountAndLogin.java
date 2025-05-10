@@ -24,7 +24,7 @@ import com.hiphen.generic.webdriverutility.JavaUtility;
 import com.hiphen.generic.webdriverutility.UtilityClassobject;
 import com.hiphen.generic.webdriverutility.WebDriverUtility;
 @Listeners(com.hiphen.crm.generic.ilistener.ListenerImplementation.class)
-public class createUserAccountAndLogin extends BaseClass {
+public class CreateUserAccountAndLogin extends BaseClass {
 	@Test
 	public void createUserAccountAndLogin() throws IOException, InterruptedException
 	{

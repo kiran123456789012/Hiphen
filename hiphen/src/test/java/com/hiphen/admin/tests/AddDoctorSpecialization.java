@@ -16,7 +16,7 @@ import com.hiphen.generic.objectrepository.AdminLoginPage;
 import com.hiphen.generic.objectrepository.HomePage;
 import com.hiphen.generic.webdriverutility.UtilityClassobject;
 @Listeners(com.hiphen.crm.generic.ilistener.ListenerImplementation.class)
-public class addDoctorSpecialization extends BaseClass{
+public class AddDoctorSpecialization extends BaseClass{
 
 	@Test
 	public void addDoctorSpecialization() throws EncryptedDocumentException, IOException

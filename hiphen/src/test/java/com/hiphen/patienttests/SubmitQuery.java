@@ -16,7 +16,7 @@ import com.hiphen.generic.objectrepository.ContactUs;
 import com.hiphen.generic.objectrepository.HomePage;
 import com.hiphen.generic.webdriverutility.UtilityClassobject;
 @Listeners(com.hiphen.crm.generic.ilistener.ListenerImplementation.class)
-public class submitQuery extends BaseClass{
+public class SubmitQuery extends BaseClass{
 	@Test
 	public void submittQueryyy() throws EncryptedDocumentException, IOException, InterruptedException
 	{
