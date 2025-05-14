@@ -15,7 +15,7 @@ import com.hiphen.generic.objectrepository.AdminLoginPage;
 import com.hiphen.generic.objectrepository.HomePage;
 import com.hiphen.generic.webdriverutility.UtilityClassobject;
 @Listeners(com.hiphen.crm.generic.ilistener.ListenerImplementation.class)
-public class CreateAnDoctorAccount extends BaseClass {
+public class CreateAnDoctorAccountTest extends BaseClass {
 	@Test
 	public void addDoctorByAdmin() throws EncryptedDocumentException, IOException, InterruptedException {
 	HomePage hp=new HomePage(driver);

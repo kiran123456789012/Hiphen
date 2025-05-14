@@ -14,7 +14,7 @@ import com.hiphen.generic.fileutility.FileUtility;
 import com.hiphen.generic.webdriverutility.JavaUtility;
 import com.hiphen.generic.webdriverutility.WebDriverUtility;
 
-public class CreateAdmin {
+public class CreateAdminTest {
 	@Test
 	public void createAdminAccount() throws InterruptedException, IOException
 	{

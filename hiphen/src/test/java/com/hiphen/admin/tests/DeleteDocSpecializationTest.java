@@ -17,7 +17,7 @@ import com.hiphen.generic.objectrepository.AdminLoginPage;
 import com.hiphen.generic.objectrepository.HomePage;
 import com.hiphen.generic.webdriverutility.UtilityClassobject;
 @Listeners(com.hiphen.crm.generic.ilistener.ListenerImplementation.class)
-public class DeleteDocSpecialization extends BaseClass {
+public class DeleteDocSpecializationTest extends BaseClass {
 @Test
 public void deletedocspecialization() throws EncryptedDocumentException, IOException, InterruptedException
 {

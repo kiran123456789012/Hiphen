@@ -16,7 +16,7 @@ import com.hiphen.generic.webdriverutility.WebDriverUtility;
 
 
 
-public class CreateDoctor {
+public class CreateDoctorTest {
 	@Test
 	public void createDoctorAccount() throws InterruptedException, IOException
 	{

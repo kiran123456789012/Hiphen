@@ -1,8 +1,12 @@
 package com.hiphen.patienttests;
 
+import static org.testng.Assert.assertEquals;
+
 import java.io.IOException;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -15,20 +19,17 @@ import com.hiphen.generic.baseclass.BaseClass;
 import com.hiphen.generic.baseclass.CommonUtilities;
 import com.hiphen.generic.fileutility.ExcelUtility;
 import com.hiphen.generic.fileutility.FileUtility;
-import com.hiphen.generic.objectrepository.AdminDashboard;
 import com.hiphen.generic.objectrepository.HomePage;
-import com.hiphen.generic.objectrepository.UserDashboardPage;
 import com.hiphen.generic.objectrepository.UserLoginPage;
 import com.hiphen.generic.objectrepository.UserRegistrationPage;
 import com.hiphen.generic.webdriverutility.JavaUtility;
 import com.hiphen.generic.webdriverutility.UtilityClassobject;
 import com.hiphen.generic.webdriverutility.WebDriverUtility;
 @Listeners(com.hiphen.crm.generic.ilistener.ListenerImplementation.class)
-public class CreateUserAndUpdateProfile extends BaseClass {
+public class CreateUserTest extends BaseClass {
 	@Test
-	public void createUserAccountAndUpdateProfile () throws IOException, InterruptedException
+	public void createPatientAccount() throws IOException, InterruptedException
 	{
-	    String confirmationtext=null;
 		String browser=flib.getDataFromPropertiesFile("browser");
 		String url=flib.getDataFromPropertiesFile("url");
 		String username=elib.getDataFromExcelFile("Sheet1", 1, 2);
@@ -36,8 +37,8 @@ public class CreateUserAndUpdateProfile extends BaseClass {
 	    String city=elib.getDataFromExcelFile("Sheet1", 1, 4);
 	    String email=elib.getDataFromExcelFile("Sheet1", 1, 5);
 	    String password=elib.getDataFromExcelFile("Sheet1", 1, 6);
-		HomePage hp=new HomePage(driver);
-		wlib.explicitWait(driver, hp.getUserLoginLink());
+        HomePage hp=new HomePage(driver);
+     	wlib.explicitWait(driver, hp.getUserLoginLink());
 	    wlib.scrollByAmount(driver, 0, 5000);
 	    WebElement loginlink = hp.getUserLoginLink();
 	    loginlink.click();
@@ -53,30 +54,13 @@ public class CreateUserAndUpdateProfile extends BaseClass {
 	    urp.getUserPasswordTxtField().sendKeys(password);
 	    urp.getUserPasswordAgainTxtField().sendKeys(password);
 	    urp.getUserSubmittButton().click();
-	    try {
-	   confirmationtext = driver.switchTo().alert().getText();
-	    }catch (Exception e) {}
+	    String confirmationtext = driver.switchTo().alert().getText();
 	    System.out.println(confirmationtext);
-	    try {
 	    driver.switchTo().alert().accept();
-	    }catch (Exception e) {}
-	  wlib.explicitWait(driver, ulp.getUserLoginLink());
-	     WebElement login = ulp.getUserLoginLink();
-	     wlib.scrollByAmount(driver, 0, 4000);
-	     login.click();
-	     UserDashboardPage udp=new UserDashboardPage(driver);
-	     wlib.explicitWait(driver, ulp.getUserNameTextField());
-	     ulp.getUserNameTextField().sendKeys(email);
-	     ulp.getUserPasswordTextField().sendKeys(password);
-	     ulp.getUserLoginButton().click();
-	     udp.getUpdateProfileLink().click();
-	     wlib.selectbyVisibleText(udp.getGenderDropdown(),"Male");
-	     udp.getUpdateButton().click();
-	     String result = driver.findElement(By.xpath("//h5[@style='color: green; font-size:18px; ']")).getText();
-	     boolean b=result.isEmpty();
-	     Assert.assertFalse(b);
-	     UtilityClassobject.getTest().log(Status.PASS, "passed");
+	    boolean b=confirmationtext.isEmpty();
+	    Assert.assertFalse(b);
+	    UtilityClassobject.getTest().log(Status.PASS, "test case passed succesfully");
 	    
-	     
+	    
+	       }
 	}
-}

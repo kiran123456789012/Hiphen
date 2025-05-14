@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test thread-count="5" name="Test">
+    <classes>
+      <class name="com.hiphen.admin.tests.EditSpecialization"/>
+      <class name="com.hiphen.admin.tests.CreateAnDoctorAccount"/>
+      <class name="com.hiphen.patienttests.CreateUserAccountAndLogin"/>
+      <class name="com.hiphen.patienttests.SubmitQuery"/>
+      <class name="com.hiphen.patienttests.BookAppointment"/>
+      <class name="com.hiphen.patienttests.CreateUserAndUpdateProfile"/>
+      <class name="com.hiphen.patienttests.ReadQueryAsAdmin"/>
+      <class name="com.hiphen.admin.tests.AddDoctorSpecialization"/>
+      <class name="com.hiphen.patienttests.CreateUser"/>
+      <class name="com.hiphen.admin.tests.DeleteDocSpecialization"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

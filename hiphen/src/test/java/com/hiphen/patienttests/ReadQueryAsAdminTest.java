@@ -22,7 +22,7 @@ import com.hiphen.generic.objectrepository.ContactUs;
 import com.hiphen.generic.objectrepository.HomePage;
 import com.hiphen.generic.webdriverutility.UtilityClassobject;
 @Listeners(com.hiphen.crm.generic.ilistener.ListenerImplementation.class)
-public class ReadQueryAsAdmin extends BaseClass {
+public class ReadQueryAsAdminTest extends BaseClass {
 	@Test
 	public void readQueryasAdmin() throws EncryptedDocumentException, IOException, InterruptedException
 	{

@@ -18,7 +18,7 @@ import com.hiphen.generic.objectrepository.EditDocSpecizlization;
 import com.hiphen.generic.objectrepository.HomePage;
 import com.hiphen.generic.webdriverutility.UtilityClassobject;
 @Listeners(com.hiphen.crm.generic.ilistener.ListenerImplementation.class)
-public class EditSpecialization extends BaseClass {
+public class EditSpecializationTest extends BaseClass {
 	@Test
 	public void editSpecialization() throws EncryptedDocumentException, IOException, InterruptedException
 	{
